@@ -1,0 +1,119 @@
+:root {
+    --bg-bright: #ffffff;
+    --bg-offwhite: #f7f9fc;
+    --accent-teal: #00e5ff; /* Slightly brighter teal */
+    --accent-blue: #0072ff;
+    --text-dark: #333333;
+    --text-charcoal: #555555;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: var(--bg-bright);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 8%;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.logo { font-size: 1.8rem; font-weight: 800; letter-spacing: -1px; color: var(--text-dark); }
+.logo span { color: var(--accent-blue); }
+
+ul { display: flex; list-style: none; gap: 2rem; align-items: center; margin: 0; }
+a { text-decoration: none; color: var(--text-dark); transition: 0.3s; font-size: 0.95rem; font-weight: 500; }
+a:hover { color: var(--accent-blue); }
+
+.hero {
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    background: radial-gradient(circle at 100% 0%, #e0f7fa 0%, #ffffff 60%);
+}
+
+.hero-content { max-width: 650px; }
+h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 1.5rem; color: #1a1a1a; font-weight: 800;}
+
+p { color: var(--text-charcoal); font-size: 1.1rem; }
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-teal));
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    color: white !important;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 114, 255, 0.2);
+}
+
+.btn-secondary {
+    border: 2px solid var(--accent-blue);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    margin-left: 1rem;
+    color: var(--accent-blue) !important;
+    font-weight: 600;
+}
+
+.services, .science-section, .team-section {
+    padding: 80px 10%;
+    background-color: var(--bg-offwhite);
+}
+
+.science-section { background-color: var(--bg-bright); }
+
+h2 { font-size: 2.5rem; text-align: center; margin-bottom: 1rem; color: #1a1a1a; }
+
+.card-container, .science-grid, .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.card, .team-card {
+    background: var(--bg-bright);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    transition: 0.4s;
+    box-shadow: var(--card-shadow);
+}
+
+.card.active { border-color: var(--accent-blue); background-color: #fbfdff; }
+.card i { font-size: 2.5rem; color: var(--accent-blue); margin-bottom: 1.5rem; }
+
+.card h3, .team-card h3 { color: #1a1a1a; }
+
+.step-num { 
+    font-size: 3rem; 
+    font-weight: 900; 
+    color: rgba(0, 114, 255, 0.4); /* Increased from 0.08 to 0.4 for depth */
+    display: block; 
+    margin-bottom: -15px;
+    letter-spacing: -2px; /* Optional: makes it look more "high-end" */
+}
+
+.credentials { color: var(--accent-blue); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
+
+.bio { color: var(--text-charcoal); }
+
+footer { text-align: center; padding: 60px; background-color: #1a1a1a; color: white; }
+footer .logo { color: white; margin-bottom: 1rem;}
+footer .logo span { color: var(--accent-teal); }
+footer p { color: #aaaaaa; }
